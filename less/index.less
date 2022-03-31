@@ -1,0 +1,184 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  word-wrap: break-word;
+  font-family: "Merienda", cursive;
+}
+
+html {
+  overflow: auto;
+  text-align: center;
+}
+
+.recursive-style( @start:@n ; @n ; @unit : px; @j : 1 ;@_s:0 ; @step-size:1  ; @selector:~".span-"; @property : width)
+  when
+  not(@n=0) {
+  @size: @start+ @_s;
+
+  @{selector}@{j} {
+    @{property}: ~"@{size}@{unit}";
+  }
+  .recursive-style(@start ,  (@n - 1), @unit , (@j + 1) ,  (@_s+@step-size) , @step-size,  @selector, @property);
+}
+
+.recursive-style( @n: 100, @start:1, @unit: "px", @property:font-size, @selector: ~".font-size-", @step-size: 1);
+.recursive-style( @n: 100, @start:1, @unit: "px", @property:padding, @selector: ~".padding-", @step-size: 1);
+.recursive-style( @n: 100, @start:1, @unit: "px", @property:gap, @selector: ~".gap-", @step-size: 1);
+
+.font-1-1 {
+  font-family: "Playfair Display", serif;
+}
+
+.font-1-2 {
+  font-family: "Caveat", cursive;
+}
+
+.font-1-3 {
+  font-family: "Cinzel", serif;
+}
+
+.font-1-4 {
+  font-family: "Gochi Hand", cursive;
+}
+
+.font-1-5 {
+  font-family: "Merienda", cursive;
+}
+
+.font-2-1 {
+  font-family: "Liu Jian Mao Cao", cursive;
+}
+
+.font-2-2 {
+  font-family: "Long Cang", cursive;
+}
+
+.font-2-3 {
+  font-family: "Ma Shan Zheng", cursive;
+}
+
+.font-2-4 {
+  font-family: "ZCOOL XiaoWei", serif;
+}
+
+.font-2-5 {
+  font-family: "Zhi Mang Xing", cursive;
+}
+
+.color-1 {
+  color: #ffffff;
+}
+
+.color-2 {
+  color: #dd8282;
+}
+
+.color-3 {
+  color: #da9168;
+}
+
+.color-4 {
+  color: lawngreen;
+}
+
+.color-5 {
+  color: rgb(209, 201, 223);
+}
+
+.color-6 {
+  color: gray;
+}
+
+.color-7 {
+  color: rgb(223, 191, 202);
+}
+
+.color-8 {
+  color: palegoldenrod;
+}
+
+.color-9 {
+  color: rgb(209, 99, 26);
+}
+
+.color-10 {
+  color: rgb(51, 255, 0);
+}
+
+.color-11 {
+  color: rgb(96, 211, 42);
+}
+
+.color-12 {
+  color: plum;
+}
+
+.border-1 {
+  border: 1px solid white;
+}
+
+.border-2 {
+  border: 1px solid yellow;
+}
+
+.border-3 {
+  border: 1px solid blue;
+}
+
+.border-4 {
+  border: 1px solid black;
+}
+
+.border-bottom-1 {
+  border-bottom: 1px solid black;
+}
+
+.text-align-1 {
+  text-align: left !important;
+}
+
+.text-align-2 {
+  text-align: center !important;
+}
+
+.text-align-3 {
+  text-align: right !important;
+}
+
+.opacity-0 {
+  opacity: 1;
+}
+
+.opacity-1 {
+  opacity: 0.5;
+}
+
+.background-1 {
+  background: white;
+}
+
+.background-2 {
+  background: red;
+}
+
+.background-3 {
+  background: yellow;
+}
+
+.background-4 {
+  background: blue;
+}
+
+.background-5 {
+  background: black;
+}
+
+.background-6 {
+  background: rgb(17, 25, 95);
+}
+
+.background-7 {
+  background: rgb(25, 173, 211);
+}
