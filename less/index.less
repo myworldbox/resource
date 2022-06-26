@@ -34,6 +34,7 @@ html {
   .recursive-style(@start ,  (@n - 1), @unit , (@j + 1) ,  (@_s+@step-size) , @step-size,  @selector, @property);
 }
 
+.recursive-style( @n: 100, @start:1, @unit: "px", @property:border-radius, @selector: ~".border-radius-", @step-size: 1);
 .recursive-style( @n: 100, @start:1, @unit: "px", @property:font-size, @selector: ~".font-size-", @step-size: 1);
 .recursive-style( @n: 100, @start:1, @unit: "px", @property:padding, @selector: ~".padding-", @step-size: 1);
 .recursive-style( @n: 100, @start:1, @unit: "px", @property:margin, @selector: ~".margin-", @step-size: 1);
