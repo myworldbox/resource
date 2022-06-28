@@ -4,6 +4,11 @@
   --resURL: url("https://myworldbox.github.io/resources/images/VLascii2.gif");
 }
 
+@element: border-radius, font-size, padding, margin, gap;
+@color: #ffffff, #dd8282, #da9168, lawngreen, rgb(209, 201, 223), gray,
+  rgb(223, 191, 202), palegoldenrod, rgb(209, 99, 26), rgb(51, 255, 0),
+  rgb(96, 211, 42), plum, blue, black, rgb(17, 25, 95);
+
 * {
   margin: 0 auto;
   padding: 0;
@@ -23,23 +28,33 @@ html {
   text-align: center;
 }
 
-.recursive-style( @current: 1; @max: 100; @offset: 1; @unit: px; @cell)
+.index-style( @current: 1; @max: 100; @offset: 1; @unit: px; @cell)
   when
   (@current <= @max) {
   .@{cell}-@{current} {
     @{cell}: ~"@{current}@{unit}";
   }
-  .recursive-style((@current + @offset), @max, @offset, @unit, @cell);
+  .index-style((@current + @offset), @max, @offset, @unit, @cell);
 }
 
 .element-to-style(@i: length(@element)) when (@i > 0) {
   .element-to-style(@i - 1);
 
-  .recursive-style(@current:1, @max: 100, @offset: 1, @unit: "px", @cell: extract(@element, @i));
+  .index-style(@current:1, @max: 100, @offset: 1, @unit: "px", @cell: extract(@element, @i));
 }
 
-@element: border-radius, font-size, padding, margin, gap;
+.dictionary-to-style(@text, @i:1, @element, @max:length(@element)) when (@i <= @max) {
+
+  .dictionary-to-style(@text, @i: (@i + 1), @element, @max);
+.@{text}-@{i} {
+    @{text}: extract(@element, @i);
+  }
+}
+
 .element-to-style();
+
+.dictionary-to-style(@text: color, @element: @color);
+.dictionary-to-style(@text: background, @element: @color);
 
 .font-1-1 {
   font-family: "Playfair Display", serif;
@@ -81,54 +96,6 @@ html {
   font-family: "Zhi Mang Xing", cursive;
 }
 
-.color-1 {
-  color: #ffffff;
-}
-
-.color-2 {
-  color: #dd8282;
-}
-
-.color-3 {
-  color: #da9168;
-}
-
-.color-4 {
-  color: lawngreen;
-}
-
-.color-5 {
-  color: rgb(209, 201, 223);
-}
-
-.color-6 {
-  color: gray;
-}
-
-.color-7 {
-  color: rgb(223, 191, 202);
-}
-
-.color-8 {
-  color: palegoldenrod;
-}
-
-.color-9 {
-  color: rgb(209, 99, 26);
-}
-
-.color-10 {
-  color: rgb(51, 255, 0);
-}
-
-.color-11 {
-  color: rgb(96, 211, 42);
-}
-
-.color-12 {
-  color: plum;
-}
-
 .border-1 {
   border: 1px solid white;
 }
@@ -167,32 +134,4 @@ html {
 
 .opacity-1 {
   opacity: 0.5;
-}
-
-.background-1 {
-  background: white;
-}
-
-.background-2 {
-  background: red;
-}
-
-.background-3 {
-  background: yellow;
-}
-
-.background-4 {
-  background: blue;
-}
-
-.background-5 {
-  background: black;
-}
-
-.background-6 {
-  background: rgb(17, 25, 95);
-}
-
-.background-7 {
-  background: rgb(25, 173, 211);
 }
