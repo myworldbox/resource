@@ -1,13 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Cinzel&family=Gochi+Hand&family=Indie+Flower&family=Liu+Jian+Mao+Cao&family=Long+Cang&family=Ma+Shan+Zheng&family=Playfair+Display&family=ZCOOL+XiaoWei&family=Zhi+Mang+Xing&display=swap");
 
-:root {
-  --resURL: url("https://myworldbox.github.io/resources/images/VLascii2.gif");
-}
-
 @element: border-radius, font-size, padding, margin, gap;
+
 @color: #ffffff, #dd8282, #da9168, lawngreen, rgb(209, 201, 223), gray,
   rgb(223, 191, 202), palegoldenrod, rgb(209, 99, 26), rgb(51, 255, 0),
   rgb(96, 211, 42), plum, blue, black, rgb(17, 25, 95);
+
+@font-family: "Playfair Display", serif, "Caveat", cursive, "Cinzel", serif,
+  "Gochi Hand", cursive, "Merienda", cursive, "Liu Jian Mao Cao", cursive,
+  "Long Cang", cursive, "Ma Shan Zheng", cursive, "ZCOOL XiaoWei", serif;
+
+:root {
+  --resURL: url("https://myworldbox.github.io/resources/images/VLascii2.gif");
+}
 
 * {
   margin: 0 auto;
@@ -43,78 +48,51 @@ html {
   .index-style(@current:1, @max: 100, @offset: 1, @unit: "px", @cell: extract(@element, @i));
 }
 
-.dictionary-to-style(@text, @i:1, @element, @max:length(@element)) when (@i <= @max) {
-
-  .dictionary-to-style(@text, @i: (@i + 1), @element, @max);
-.@{text}-@{i} {
-    @{text}: extract(@element, @i);
+.switch(@text, @i, @element, @operator)
+  when
+  (@operator = 0)and
+  (@i < length(@element)) {
+  .@{text}-@{i} {
+    @{text}: extract(@element, @i + 1);
   }
+}
+
+.switch(@text, @i, @element, @operator)
+  when
+  (@operator = 1)
+  and
+  (@i < length(@element)) {
+  .@{text}-@{i} {
+    @{text}: 1px solid extract(@element, @i + 1);
+  }
+}
+
+.switch(@text, @i, @element, @operator)
+  when
+  (@operator = 2)
+  and
+  (@i < length(@element)/2) {
+  .@{text}-@{i} {
+    @{text}: extract(@element, @i * 2 + 1), extract(@element, (@i * 2) + 2);
+  }
+}
+
+.dictionary-to-style(@text, @i:0, @element, @max:length(@element), @operator)
+  when
+  (@i <= @max) {
+  .dictionary-to-style(@text, @i: (@i + 1), @element, @max, @operator);
+  .switch(@text, @i, @element, @operator);
 }
 
 .element-to-style();
 
-.dictionary-to-style(@text: color, @element: @color);
-.dictionary-to-style(@text: background, @element: @color);
+.dictionary-to-style(@text: color, @element: @color, @operator:0);
+.dictionary-to-style(@text: background, @element: @color, @operator:0);
 
-.font-1-1 {
-  font-family: "Playfair Display", serif;
-}
+.dictionary-to-style(@text: border, @element: @color, @operator:1);
+.dictionary-to-style(@text: border-bottom, @element: @color, @operator:1);
 
-.font-1-2 {
-  font-family: "Caveat", cursive;
-}
-
-.font-1-3 {
-  font-family: "Cinzel", serif;
-}
-
-.font-1-4 {
-  font-family: "Gochi Hand", cursive;
-}
-
-.font-1-5 {
-  font-family: "Merienda", cursive;
-}
-
-.font-2-1 {
-  font-family: "Liu Jian Mao Cao", cursive;
-}
-
-.font-2-2 {
-  font-family: "Long Cang", cursive;
-}
-
-.font-2-3 {
-  font-family: "Ma Shan Zheng", cursive;
-}
-
-.font-2-4 {
-  font-family: "ZCOOL XiaoWei", serif;
-}
-
-.font-2-5 {
-  font-family: "Zhi Mang Xing", cursive;
-}
-
-.border-1 {
-  border: 1px solid white;
-}
-
-.border-2 {
-  border: 1px solid yellow;
-}
-
-.border-3 {
-  border: 1px solid blue;
-}
-
-.border-4 {
-  border: 1px solid black;
-}
-
-.border-bottom-1 {
-  border-bottom: 1px solid black;
-}
+.dictionary-to-style(@text: font-family, @element: @font-family, @operator:2);
 
 .text-align-1 {
   text-align: left !important;
