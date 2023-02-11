@@ -1,0 +1,11 @@
+{
+  "name": "resource",
+  "version": "1.0.0",
+  "description": "resource",
+  "scripts": {
+    "commit": "git add . && git commit -a -m 'myworldbox' && git push"
+  },
+  "keywords": [],
+  "author": "myworldbox",
+  "license": "ISC"
+}
