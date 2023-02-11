@@ -2,13 +2,13 @@
   {
     "id": 1,
     "content0": "UniLetsBeFd",
-    "content1": "https://uniletsbefd.github.io/",
+    "content1": "https://uniletsbefd.github.io",
     "content2": "This joint-school assoication is created,\nto let university students to meet,\nduring the pandemic."
   },
   {
     "id": 2,
     "content0": "myworldbox",
-    "content1": "https://myworldbox.weebly.com/",
+    "content1": "https://myworldbox.weebly.com",
     "content2": "This wesbite was about Twilight Wars."
   },
   {
@@ -20,25 +20,25 @@
   {
     "id": 4,
     "content0": "myworldbox",
-    "content1": "https://myworldbox.wordpress.com/",
+    "content1": "https://myworldbox.wordpress.com",
     "content2": "This blog contains all my techincal,\nand youtube sharings."
   },
   {
     "id": 5,
     "content0": "pong",
-    "content1": "https://myworldbox.github.io/pong/",
+    "content1": "https://myworldbox.github.io/pong",
     "content2": "To learn game making,\nI made this game."
   },
   {
     "id": 6,
     "content0": "snake",
-    "content1": "https://myworldbox.github.io/snake/",
+    "content1": "https://myworldbox.github.io/snake",
     "content2": "To learn more about JavaScript,\nI made this game."
   },
   {
     "id": 7,
     "content0": "firechat",
-    "content1": "https://myworldbox.github.io/firechat/",
+    "content1": "https://myworldbox.github.io/firecha",
     "content2": "To learn more about Firebase,\nI made this chatroom."
   }
 ]
