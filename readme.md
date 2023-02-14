@@ -1,6 +1,6 @@
 # useful command
 
-```ruby
+```bash
 git clone https://github.com/myworldbox/old-repo
 git pull
 git submodule add
