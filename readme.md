@@ -1,6 +1,8 @@
 # useful command
 
 ```bash
+git pull orgin branch
+
 git clone https://github.com/myworldbox/old-repo
 git pull
 git submodule add
