@@ -3,17 +3,17 @@
     "name": "myworldbox | VL Blockchain",
     "icons": [
       {
-        "src": "https://myworldbox.github.io/resources/images/VLlogo.png",
+        "src": "https://myworldbox.github.io/resource/image/VLlogo.png",
         "sizes": "64x64",
         "type": "image/png"
       },
       {
-        "src": "https://myworldbox.github.io/resources/images/VLlogo.png",
+        "src": "https://myworldbox.github.io/resource/image/VLlogo.png",
         "type": "image/png",
         "sizes": "256x256"
       },
       {
-        "src": "https://myworldbox.github.io/resources/images/VLlogo.png",
+        "src": "https://myworldbox.github.io/resource/image/VLlogo.png",
         "type": "image/png",
         "sizes": "512x512"
       }
