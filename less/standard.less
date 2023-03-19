@@ -1,0 +1,33 @@
+
+@element: border-radius, font-size, padding, margin, gap;
+
+@absolute_unit: cm, mm, in, px, pt, pc;
+@relative_unit: em, ex, ch, rem, vw, vh, vmin, vmax, ~"%";
+
+@start: 1; 
+@end: 100; 
+@offset: 1;
+
+.index-style(@current: @start; @max: @end; @offset: @offset; @unit: @unit; @cell) when (@current <=@max) {
+
+    .@{cell}-@{current}-@{unit} {
+      @{cell}:~"@{current}@{unit}";
+    }
+  
+    .index-style((@current + @offset), @max, @offset, @unit, @cell);
+  }
+
+.element-to-style(@unit: @unit, @y: length(@element)) when (@y > 0) {
+    .element-to-style(@unit: @unit, @y - 1);
+
+    .index-style(@unit: @unit, @cell: extract(@element, @y));
+}
+
+.unit-to-style(@unit: @unit, @x: length(@unit)) when (@x > 0) {
+    .unit-to-style(@unit: @unit, @x - 1);
+
+    .element-to-style(@unit: extract(@unit, @x));
+}
+
+.unit-to-style(@unit: @absolute_unit);
+.unit-to-style(@unit: @relative_unit);
