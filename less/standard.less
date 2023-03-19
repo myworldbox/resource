@@ -8,26 +8,26 @@
 @end: 100; 
 @offset: 1;
 
-.index-style(@current: @start; @max: @end; @offset: @offset; @unit: @unit; @cell) when (@current <=@max) {
+.index_loop(@current: @start; @max: @end; @offset: @offset; @unit: @unit; @cell) when (@current <=@max) {
 
     .@{cell}-@{current}-@{unit} {
       @{cell}:~"@{current}@{unit}";
     }
   
-    .index-style((@current + @offset), @max, @offset, @unit, @cell);
+    .index_loop((@current + @offset), @max, @offset, @unit, @cell);
   }
 
-.element-to-style(@unit: @unit, @y: length(@element)) when (@y > 0) {
-    .element-to-style(@unit: @unit, @y - 1);
+.element_loop(@unit: @unit, @y: length(@element)) when (@y > 0) {
+    .element_loop(@unit: @unit, @y - 1);
 
-    .index-style(@unit: @unit, @cell: extract(@element, @y));
+    .index_loop(@unit: @unit, @cell: extract(@element, @y));
 }
 
-.unit-to-style(@unit: @unit, @x: length(@unit)) when (@x > 0) {
-    .unit-to-style(@unit: @unit, @x - 1);
+.unit_loop(@unit: @unit, @x: length(@unit)) when (@x > 0) {
+    .unit_loop(@unit: @unit, @x - 1);
 
-    .element-to-style(@unit: extract(@unit, @x));
+    .element_loop(@unit: extract(@unit, @x));
 }
 
-.unit-to-style(@unit: @absolute_unit);
-.unit-to-style(@unit: @relative_unit);
+.unit_loop(@unit: @absolute_unit);
+.unit_loop(@unit: @relative_unit);
