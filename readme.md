@@ -14,5 +14,8 @@ https://github.com/myworldbox/new-submodule new-submodule
 
 git add .
 git commit -m 'myworldbox'
-git push
+
+// eithir one
+1. git push
+2. git push --set-upstream origin victor-leung
 ```
