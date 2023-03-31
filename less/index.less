@@ -31,7 +31,7 @@ html {
 Recursive styling (variables)
 */
 
-@element: border-radius, font-size, padding, margin, gap;
+@element: border-radius, font-size, padding, margin, gap, max-width;
 
 @color: #ffffff, #dd8282, #da9168, lawngreen, rgb(209, 201, 223), gray,
   rgb(223, 191, 202), palegoldenrod, rgb(209, 99, 26), rgb(51, 255, 0),
@@ -45,7 +45,7 @@ Recursive styling (variables)
 Recursive styling (functions)
 */
 
-.index-style( @current: 1; @max: 100; @offset: 1; @unit: px; @cell)
+.index-style( @current: 1; @max: 1000; @offset: 1; @unit: px; @cell)
   when
   (@current <= @max) {
   .@{cell}-@{current} {
