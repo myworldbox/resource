@@ -1,5 +1,5 @@
 {
-    "motto": [
+    "chinese": [
         {
             "id": 1,
             "text": "無懼世事\n\t變改"
@@ -83,6 +83,12 @@
         {
             "id": 21,
             "text": "銀河星辰\n\t也不及您好"
+        }
+    ],
+    "english": [
+        {
+            "id": 1,
+            "text": "We shall never surrender"
         }
     ]
 }
