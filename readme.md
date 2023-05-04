@@ -2,7 +2,7 @@
 
 This repository stores general api assets that are easy to use
 
-# useful command
+# git command
 
 ```bash
 git pull orgin branch
@@ -18,4 +18,11 @@ git commit -m 'myworldbox'
 // eithir one
 1. git push
 2. git push --set-upstream origin victor-leung
+```
+
+# native command
+
+```bash
+adb reverse tcp:8081 tcp:8081
+adb install myworldbox.apk
 ```
