@@ -1,0 +1,108 @@
+{
+    "contact": [
+        {
+            "id": 1,
+            "name": "PayMe",
+            "preview": "https://myworldbox.github.io/resource/svg/payme.svg",
+            "link": "https://payme.hsbc/myworldbox"
+        },
+        {
+            "id": 2,
+            "name": "Gmail",
+            "preview": "https://myworldbox.github.io/resource/svg/gmail.svg",
+            "link": "https://mail.google.com/mail/?view=cm&fs=1&to=54nicholasleung45@gmail.com"
+        },
+        {
+            "id": 3,
+            "name": "Facebook",
+            "preview": "https://myworldbox.github.io/resource/svg/facebook.svg",
+            "link": "https://www.facebook.com/myworldbox"
+        },
+        {
+            "id": 4,
+            "name": "Instagram",
+            "preview": "https://myworldbox.github.io/resource/svg/instagram.svg",
+            "link": "https://www.instagram.com/54victor45/"
+        },
+        {
+            "id": 5,
+            "name": "YouTube",
+            "preview": "https://myworldbox.github.io/resource/svg/youtube.svg",
+            "link": "https://www.youtube.com/channel/UC6IRGg5BatSl5fmU97fggcg/"
+        },
+        {
+            "id": 6,
+            "name": "GitHub",
+            "preview": "https://myworldbox.github.io/resource/svg/github.svg",
+            "link": "https://github.com/myworldbox/"
+        },
+        {
+            "id": 7,
+            "name": "Stackoverflow",
+            "preview": "https://myworldbox.github.io/resource/svg/stackoverflow.svg",
+            "link": "https://stackoverflow.com/users/12192271/myworldbox"
+        },
+        {
+            "id": 8,
+            "name": "TradingView",
+            "preview": "https://myworldbox.github.io/resource/svg/tradingview.svg",
+            "link": "https://www.tradingview.com/u/myworldbox/"
+        },
+        {
+            "id": 9,
+            "name": "Zhihu",
+            "preview": "https://myworldbox.github.io/resource/svg/zhihu.svg",
+            "link": "https://www.zhihu.com/people/myworldbox"
+        },
+        {
+            "id": 10,
+            "name": "Medium",
+            "preview": "https://myworldbox.github.io/resource/svg/medium.svg",
+            "link": "https://medium.com/@mysublimebox"
+        }
+    ],
+    "app": [
+        {
+            "id": 1,
+            "link": "https://uniletsbefd.github.io",
+            "name": "UniLetsBeFd",
+            "description": "這個聯校聯誼會的成立，是為了讓大學生在疫情期間相聚。"
+        },
+        {
+            "id": 2,
+            "link": "https://myworldbox.weebly.com",
+            "name": "myworldbox-weebly",
+            "description": "這個網站是關於暮光之城戰爭的。"
+        },
+        {
+            "id": 3,
+            "link": "https://play.google.com/store/apps/details?id=com.myworldbox.XInARow",
+            "name": "XInARow",
+            "description": "為了學習 Android 應用程序開發，我製作了這個遊戲。"
+        },
+        {
+            "id": 4,
+            "link": "https://myworldbox.wordpress.com",
+            "name": "myworldbox-wordpress",
+            "description": "這個博客包含我所有的技術和 YouTube 分享。"
+        },
+        {
+            "id": 5,
+            "link": "https://myworldbox.github.io/pong",
+            "name": "乒乓",
+            "description": "為了學習遊戲製作，我製作了這個遊戲。"
+        },
+        {
+            "id": 6,
+            "link": "https://myworldbox.github.io/snake",
+            "name": "蛇",
+            "description": "為了了解更多關於 JavaScript 的知識，我製作了這個遊戲。"
+        },
+        {
+            "id": 7,
+            "link": "https://myworldbox.github.io/firechat",
+            "name": "FireChat",
+            "description": "為了了解有關 Firebase 的更多信息，我創建了這個聊天室。"
+        }
+    ]
+}
